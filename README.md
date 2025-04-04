@@ -56,7 +56,7 @@
 ### Commandes serveur
 - `exit` : Arrête le serveur.
 - `list` : Affiche la liste des agents connectés avec leurs informations.
-![Résulatat de la commande 'list'](list.png)
+- ![Résulatat de la commande 'list'](list.png)
 - `cmd_all <commande>` : Envoie une commande à tous les agents connectés.
 - `cmd <uid> <commande>` : Envoie une commande à un agent spécifique identifié par son UID.
 
