@@ -4,7 +4,6 @@
 
 1. **Pré-requis** :
    - Python 3.x installé sur le serveur et les agents.
-   - Les bibliothèques nécessaires : `ssl`, `socket`, `json`, etc. (installées par défaut avec Python).
    - Certificat SSL (`server.crt`) et clé privée (`server.key`) pour sécuriser les communications.
 
 2. **Installation du serveur** :
@@ -15,6 +14,17 @@
    - Placez le fichier `agent.py` sur les machines cibles.
    - Configurez l'adresse IP et le port du serveur dans le fichier `agent.py` (variables `SERVER_HOST` et `SERVER_PORT`).
    - Exécutez le script pour démarrer l'agent.
+
+4. **Lancer le serveur** :
+   - Exécutez la commande suivante dans un terminal :
+     ```bash
+     python Server.py <IP> <PORT>
+     ```
+   - Remplacez `<IP>` par l'adresse IP du serveur et `<PORT>` par le port à utiliser.
+   - Exemple :
+     ```bash
+     python Server.py 192.168.1.100 8080
+     ```
 
 ## Fonctionnalités
 
