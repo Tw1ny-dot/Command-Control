@@ -1,5 +1,9 @@
 # Command & Control (C2) Documentation
 
+## Avertissement légal et de sécurité
+
+**Attention :** Ce projet est fourni à des fins éducatives et de recherche uniquement. Toute utilisation de ce programme pour des activités illégales ou non autorisées est strictement interdite. L'auteur décline toute responsabilité pour les dommages ou conséquences résultant d'une utilisation abusive de ce code. Assurez-vous d'avoir l'autorisation explicite des parties concernées avant de déployer ce programme dans un environnement réel.
+
 ## Procédure d'installation
 
 1. **Pré-requis** :
