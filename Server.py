@@ -143,7 +143,7 @@ def server_commands(server):
         elif cmd.strip().lower().startswith("cmd"):
             parts = cmd.split(" ", 2)
             if len(parts) < 3:
-                print("Usage : exec <uid> <commande>")
+                print("Usage : cmd <uid> <commande>")
                 continue
             uid, command_to_execute = parts[1], parts[2]
             
