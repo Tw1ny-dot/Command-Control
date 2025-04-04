@@ -12,7 +12,7 @@
 
 2. **Installation du serveur** :
    - Placez le fichier `Server.py` sur la machine qui jouera le rôle de serveur.
-   - Assurez-vous que le fichier `clients.json` est dans le même répertoire pour stocker les informations des agents.
+   - Assurez-vous que le fichier `clients.json` est dans le même répertoire pour stocker les informations des agents. Il sera créer lors du premier lancement du serveur.
 
 3. **Installation de l'agent** :
    - Placez le fichier `agent.py` sur les machines cibles.
