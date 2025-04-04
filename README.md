@@ -55,8 +55,8 @@
 
 ### Commandes serveur
 - `exit` : Arrête le serveur.
-- `list` : Affiche la liste des agents connectés avec leurs informations.
-- ![Résulatat de la commande 'list'](list.png)
+- `list` : Affiche la liste des agents connectés avec leurs informations.  
+  ![Exemple de résultat de la commande 'list'](list.png)
 - `cmd_all <commande>` : Envoie une commande à tous les agents connectés.
 - `cmd <uid> <commande>` : Envoie une commande à un agent spécifique identifié par son UID.
 
@@ -101,6 +101,7 @@
 - Configure le démarrage automatique de l'agent (Windows/Linux).
 
 ## Notes
-- Les communications entre le serveur et les agents sont sécurisées via SSL.
+- Les communications entre le serveur et les agents sont sécurisées via SSL.  
+  ![Illustration des échanges chiffrés](tls.png)
 - Assurez-vous que les ports nécessaires sont ouverts sur le pare-feu.
 - Utilisez ce programme uniquement dans un cadre légal et avec l'autorisation des parties concernées.
