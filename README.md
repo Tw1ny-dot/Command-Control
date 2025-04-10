@@ -21,6 +21,7 @@
 4. **Installation de l'agent** :
    - Placez le fichier `agent.py` sur les machines cibles.
    - Configurez l'adresse IP et le port du serveur dans le fichier `agent.py` (variables `SERVER_HOST` et `SERVER_PORT`).
+     ![Modification des variables](variables.png)
    - Exécutez le script pour démarrer l'agent.
 
 5. **Lancer le serveur** :
