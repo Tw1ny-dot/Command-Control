@@ -10,16 +10,20 @@
    - Python 3.x installé sur le serveur et les agents.
    - Certificat SSL (`server.crt`) et clé privée (`server.key`) pour sécuriser les communications.
 
-2. **Installation du serveur** :
+2. **Récupération des fichiers** :
+   - git clone https://github.com/Tw1ny-dot/Command-Control.git
+   - cd Command-Control
+
+3. **Installation du serveur** :
    - Placez le fichier `Server.py` sur la machine qui jouera le rôle de serveur.
    - Assurez-vous que le fichier `clients.json` est dans le même répertoire pour stocker les informations des agents. Il sera créer lors du premier lancement du serveur.
 
-3. **Installation de l'agent** :
+4. **Installation de l'agent** :
    - Placez le fichier `agent.py` sur les machines cibles.
    - Configurez l'adresse IP et le port du serveur dans le fichier `agent.py` (variables `SERVER_HOST` et `SERVER_PORT`).
    - Exécutez le script pour démarrer l'agent.
 
-4. **Lancer le serveur** :
+5. **Lancer le serveur** :
    - Exécutez la commande suivante dans un terminal :
      ```bash
      python Server.py <IP> <PORT>
@@ -61,8 +65,7 @@
 - `cmd <uid> <commande>` : Envoie une commande à un agent spécifique identifié par son UID.
 
 ### Commandes agent
-- `GET_COMMAND` : Demande une commande au serveur.
-- Commandes système : Toute commande valide pour le système d'exploitation de l'agent (ex. `ls`, `dir`, etc.).
+- `GET_COMMAND` : L'agent demande automatiquement toutes les 10 secondes si le serveur a des commandes a executer
 
 ## Fonctionnement
 
