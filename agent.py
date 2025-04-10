@@ -8,7 +8,7 @@ import time
 import ssl
 import uuid
 
-SERVER_HOST = "57.129.5.161"  # remplacer par l'adresse IP du serveur
+SERVER_HOST = "X.X.X.X"  # remplacer par l'adresse IP du serveur
 SERVER_PORT = 4444
 
 # detection de Windows
